@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+body {
+    height: 100vh;
+}
+
+
+.titre {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.04em;
+    color: black;
+    margin: 0;
+}
+
+.rouge {
+    color: #ff5660;
+}
+
+.detailOffreEtu {
+    width: 95%;
+    height: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.detailsOffre {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1%;
+}
+
+.entreprise {
+    width: 98%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.entreprise > img {
+    width: 100px;
+}
+
+.offre {
+    width: 98%;
+    height: 64%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+    overflow-y: auto;
+}
+
+.offre::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+    background-color: #ffbfc2;
+}
+
+.offre::-webkit-scrollbar-thumb {
+    background-color: #ff5660;
+    border-radius: 10px;
+}
+
+.actionsOffre {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    background-color: #ffc4c8;
+    border-radius: 10px;
+}
+
+.actionsOffre > div > img {
+    height: 150px;
+}
+
+.actionsOffre > .first {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.astucesDetails {
+    width: 95%;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 2%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.astucesDetails > img {
+    max-height: 60%;
+}
+
+.astucesDetails > .contenuAstuce {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    width: 75%;
+    height: 98%;
+}
+
+.wrapActionsCandidat {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+
+
+}
+
+.candidature {
+    height: 130px;
+    width: 95%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    padding: 2%;
+}
+
+.candidature > img {
+    height: 85px;
+}
+
+.boutonCandidater {
+    width: 98%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.boutonCandidater > a {
+    width: 250px;
+    height: 30px;
+    border-radius: 50px;
+    border: none;
+    background-color: #ff5660;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    transition: background-color 0.5s ease;
+}
+
+.boutonCandidater > a:hover {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+#desac {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#desac:hover {
+    border: none;
+    background-color: #ff5660;
+    color: white;
+    cursor: not-allowed;
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    width: 70%;
+    height: 70%;
+    min-width: 300px;
+    text-align: left;
+    line-height: 2em;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid black;
+    z-index: 100;
+}
+
+
+.mainPopup {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.mainPopup > h2 {
+    font-family: "Oswald", sans-serif;
+    color: #ff5660;
+    letter-spacing: 0.04em;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.mainPopup > form {
+    width: 90%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 3%;
+    border: #ff5660 1px solid;
+
+}
+
+.mainPopup > form > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #ff9095;
+    padding: 5%;
+}
+
+.contenuDepot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.imagesDepot {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.imagesDepot > img {
+    width: 50%;
+}
+
+.imagesDepot > p {
+    font-size: 0.5em;
+    font-family: "Open Sans extra", sans-serif;
+    margin: 0;
+    text-align: center;
+    line-height: 1em;
+}
+
+
+.mainPopup > form > div > label {
+    font-family: "Oswald", sans-serif;
+    color: black;
+    letter-spacing: 0.04em;
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.mainPopup > form > input[type="submit"] {
+    border-radius: 50px;
+    border: none;
+    width: 80px;
+    height: 20px;
+    background-color: #ff5660;
+    color: white;
+}
+
+.mainPopup > form > input[type="submit"]:hover {
+    border-radius: 50px;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+::-webkit-file-upload-button {
+    border-radius: 50px;
+    border: none;
+    width: 120px;
+    height: 20px;
+    background-color: #ff5660;
+    color: white;
+}
+
+::-webkit-file-upload-button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.conteneurBoutonPopup {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.conteneurBoutonPopup > a {
+    width: 40%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.boutonAssignerPopup {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    border: none;
+    background-color: #ff5660;
+    color: white;
+    padding: 3%;
+}
+
+.boutonAssignerPopup:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+}
+
+.descPopup {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border-radius: 0 10px 10px 0;
+    background-color: #aadcda;
+}
+
+.descPopup > img {
+    width: 80%;
+}
+
+.descPopup > h2 {
+    font-family: "Oswald", sans-serif;
+    color: #ff5660;
+    letter-spacing: 0.04em;
+    margin: 0 2%;
+    text-align: center;
+}
+
+.interaction {
+    z-index: 10;
+    border-radius: 50px 0 0 50px;
+    width: 40px;
+    height: 40px;
+    background-color: #bde8e7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    position: fixed;
+    top: 12%;
+    right: 0;
+    cursor: pointer;
+}
+
+.interaction > img {
+    width: 70%;
+}
+
+.annotations {
+    position: fixed;
+    top: 12%;
+    right: 0;
+    width: 0;
+    height: 85%;
+    background-color: #bde8e7;
+    border-radius: 0 0 0 10px;
+    transition: width 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.wrapAnnotations {
+    width: 100%;
+    height: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    overflow-y: auto;
+    padding: 2%;
+}
+
+.wrapAnnotations::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+    background-color: #ffbfc2;
+}
+
+.wrapAnnotations::-webkit-scrollbar-thumb {
+    background-color: #ff5660;
+    border-radius: 10px;
+}
+
+.moyenne {
+    width: 98%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    padding: 1%;
+}
+
+.moyenne > div {
+    height: 50%;
+    min-width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.moyenne > div > div {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+}
+
+.moyenne > div > div > img {
+    width: 10px;
+}
+
+.autresComm {
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    padding: 1%;
+}
+
+.commentaire {
+    width: 100%;
+    min-height: 100px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    padding: 1%;
+}
+
+.commentaire > img {
+    width: 50px;
+}
+
+.commentaire > div {
+    width: 70%;
+    height: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+}
+
+
+@media (max-width: 1050px) {
+
+    body {
+        height: 185vh;
+    }
+
+    .detailOffreEtu {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+
+    .detailsOffre {
+        width: 98%;
+        height: 54%;
+    }
+
+    .actionsOffre {
+        width: 98%;
+        height: 45%;
+    }
+
+    .popup {
+        width: 90%;
+        height: 80%;
+        overflow: hidden;
+        flex-direction: column-reverse;
+        top: 45%;
+    }
+
+    .popup > div {
+        border-radius: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+    }
+
+    .descPopup {
+        height: 30%;
+    }
+
+    .mainPopup {
+        height: 70%;
+    }
+
+    .popup > div > img {
+        display: none;
+    }
+
+    .contenuDepot {
+        width: 60%;
+    }
+
+    .contenuDepot > input {
+        width: 98%;
+    }
+
+}

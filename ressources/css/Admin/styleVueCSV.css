@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+body {
+    height: 100vh;
+}
+
+.titre {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.04em;
+    color: black;
+    margin: 0;
+}
+
+.rouge {
+    color: #ff5660;
+}
+
+#center {
+    width: 90%;
+    height: 90%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.75);
+}
+
+.import {
+    width: 60%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    -webkit-border-bottom-left-radius: 10px;
+    -webkit-border-top-left-radius: 10px;
+    padding: 0.5%;
+}
+
+.information {
+    width: 80%;
+    min-height: 120px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    background-color: #ffc1c4;
+    border-radius: 10px;
+    padding: 1%;
+}
+
+.information > img {
+    width: 70px;
+    max-height: 100px;
+}
+
+.formulaire {
+    width: 80%;
+    height: 300px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    background-color: #cbdaff;
+    border-radius: 10px;
+    border: 2px dashed #5686ff;
+}
+
+.formulaire > img {
+    width: 40%;
+}
+
+.formulaire > * {
+    margin: 0;
+}
+
+.formulaire > input {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+::-webkit-file-upload-button {
+    background-color: #5686ff;
+    color: white;
+    border: none;
+    width: 150px;
+    height: 23px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+::-webkit-file-upload-button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.formulaire > input[type="submit"] {
+    background-color: #5686ff;
+    color: white;
+    border: none;
+    width: 150px;
+    height: 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.formulaire > input[type="submit"]:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+
+
+.export {
+    width: 40%;
+    height: 100%;
+    background-color: #ff9095;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+}
+
+.export > h2 {
+    margin-bottom: 10%;
+}
+
+.export > img {
+    width: 70px;
+}
+
+.export > form {
+    width: 80%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.export > form > input {
+    width: 150px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 50px;
+    border: none;
+    background-color: #ff5660;
+    color: white;
+}
+
+.export > form > input:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+@media (max-width: 1050px) {
+
+    body {
+        height: 150vh;
+    }
+
+    #center {
+        width: 100%;
+        height: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .import {
+        width: 98%;
+        height: 60%;
+        border-radius: 10px;
+    }
+
+    .export {
+        width: 98%;
+        height: 40%;
+        border-radius: 10px;
+    }
+
+    .entreprise {
+        height: 150px;
+        width: 100%;
+    }
+
+    .statutEtu {
+        width: 90%;
+        height: 40px;
+    }
+
+    .information {
+        width: 90%;
+    }
+
+    .formulaire {
+        width: 90%;
+    }
+
+}
